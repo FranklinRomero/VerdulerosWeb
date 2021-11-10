@@ -6,7 +6,6 @@ namespace WebVerduleros.Models
     {
         [Key]
         [Required(AllowEmptyStrings = false, ErrorMessage = "{0} es requerido")]
-        [StringLength(1, MinimumLength = 1, ErrorMessage = "La longitud de {0} debe estar entre {2} y {1}")]
         public int VerduraId { get; set; }
 
         [Required(AllowEmptyStrings = false, ErrorMessage = "El nombre es requerido")]
@@ -14,7 +13,6 @@ namespace WebVerduleros.Models
         public string Verdura { get; set; }
 
         [Required(AllowEmptyStrings = false, ErrorMessage = "{0} es requerido")]
-        [StringLength(3, MinimumLength = 1, ErrorMessage = "La longitud de {0} debe estar entre {1} y {3}")]
         public int Cantidad { get; set; }
 
     }

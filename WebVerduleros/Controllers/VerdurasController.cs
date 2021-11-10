@@ -12,23 +12,23 @@ namespace WebVerduleros.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class VegetalesController : ControllerBase
+    public class VerdurasController : ControllerBase
     {
         private readonly AppDbContext _context;
 
-        public VegetalesController(AppDbContext context)
+        public VerdurasController(AppDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/Vegetales
+        // GET: api/Verduras
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Verduras>>> GetVerduras()
         {
             return await _context.Verduras.ToListAsync();
         }
 
-        // GET: api/Vegetales/5
+        // GET: api/Verduras/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Verduras>> GetVerduras(int id)
         {
@@ -42,7 +42,7 @@ namespace WebVerduleros.Controllers
             return verduras;
         }
 
-        // PUT: api/Vegetales/5
+        // PUT: api/Verduras/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutVerduras(int id, Verduras verduras)
@@ -73,7 +73,7 @@ namespace WebVerduleros.Controllers
             return NoContent();
         }
 
-        // POST: api/Vegetales
+        // POST: api/Verduras
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Verduras>> PostVerduras(Verduras verduras)
@@ -84,7 +84,7 @@ namespace WebVerduleros.Controllers
             return CreatedAtAction("GetVerduras", new { id = verduras.VerduraId }, verduras);
         }
 
-        // DELETE: api/Vegetales/5
+        // DELETE: api/Verduras/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteVerduras(int id)
         {
