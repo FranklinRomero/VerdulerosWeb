@@ -22,12 +22,17 @@ namespace WebVerduleros.Migrations
                 {
                     b.Property<int>("VerduraId")
                         .ValueGeneratedOnAdd()
-                        .HasMaxLength(1)
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("Cantidad")
-                        .HasMaxLength(3)
+                    b.Property<string>("Imagen")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Mercado")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Precio")
                         .HasColumnType("int");
 
                     b.Property<string>("Verdura")

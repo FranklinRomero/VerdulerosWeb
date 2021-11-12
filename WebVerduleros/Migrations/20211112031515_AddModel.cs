@@ -10,10 +10,12 @@ namespace WebVerduleros.Migrations
                 name: "Verduras",
                 columns: table => new
                 {
-                    VerduraId = table.Column<int>(type: "int", maxLength: 1, nullable: false)
+                    VerduraId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    Mercado = table.Column<int>(type: "int", nullable: false),
                     Verdura = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Cantidad = table.Column<int>(type: "int", maxLength: 3, nullable: false)
+                    Precio = table.Column<int>(type: "int", nullable: false),
+                    Imagen = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
