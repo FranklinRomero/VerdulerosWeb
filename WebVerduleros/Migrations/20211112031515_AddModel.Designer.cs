@@ -8,7 +8,7 @@ using WebVerduleros.Data;
 
 namespace WebVerduleros.Migrations
 {
-    [DbContext(typeof(AppDbContext))]
+    [DbContext(typeof(ApplicationDbContext))]
     [Migration("20211112031515_AddModel")]
     partial class AddModel
     {
